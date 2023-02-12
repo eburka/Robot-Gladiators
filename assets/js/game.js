@@ -177,7 +177,7 @@ var shop = function(){
 
 /* END OF FUNCTIONS */
 
-//Player information 
+// Player information 
 
 var playerInfo = {
     name: window.prompt("What is your robot's name?"),
