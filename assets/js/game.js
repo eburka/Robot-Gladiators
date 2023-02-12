@@ -1,21 +1,6 @@
-<<<<<<< HEAD
 // This creates a function name "fight" 
 var fight = function(enemy) {
     console.log(enemy);
-=======
-var playerName = window.prompt("What is your robot's name?");
-var playerHealth = 100;
-var playerAttack = 10;
-var playerMoney = 10;
-
-var enemyNames = ["Roberto", "Amy Android", "Robo Trumble"];
-var enemyHealth = 50;
-var enemyAttack = 12;
-
-// This creates a function name "fight" 
-
-var fight = function(enemyName) {
->>>>>>> bf6ae42ae554e9c61f436a2f5638503418104bf8
     
     // Repeat and execute as long as the enemy-robots is alive
     while (playerHealth > 0 && enemyHealth > 0) {
@@ -25,7 +10,6 @@ var fight = function(enemyName) {
     // Prompt the player if they want to fight or skip the battle.
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'Fight' or 'Skip' to choose.");
 
-    
     // If player choses to skip
   if (promptFight === "skip" || promptFight === "SKIP") {
         
@@ -84,7 +68,6 @@ var fight = function(enemyName) {
 }
 }; // End of while loop 
 
-<<<<<<< HEAD
 //Function to generate a random numeric value 
 var randomNumber = function(min,max) {
     var value = Math.floor(Math.random() * (max - min + 1) + min);
@@ -140,9 +123,6 @@ var enemyInfo = [
 ];
 
 // Function to start a new game 
-=======
-// function to start a new game 
->>>>>>> bf6ae42ae554e9c61f436a2f5638503418104bf8
 var startGame = function() {
     // Reset player stats 
     playerHealth = 100;
@@ -158,13 +138,8 @@ var startGame = function() {
             // Pick new enemy to fight based on the index of the enemyNames array 
             var pickedEnemyName = enemyNames[i];
 
-<<<<<<< HEAD
             // Reset enemyHealth before starting new fight 
             pickedEnemyObj.health = randomNumber(40, 60);
-=======
-            // reset enemyHealth before starting new fight 
-            enemyHealth = randomNumber(40, 60);
->>>>>>> bf6ae42ae554e9c61f436a2f5638503418104bf8
             
             // Pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
             fight(pickedEnemyName);
@@ -195,15 +170,9 @@ var startGame = function() {
 // Function to END the entire game 
 var endGame = function() {
 
-<<<<<<< HEAD
     // If player is still alive, player wins!
     if (playerInfo.health > 0) {
         window.alert("Great job, you've survived the game! You now have a score of " + playerInfo.money + ".");
-=======
-    // if player is still alive, player wins!
-    if (playerHealth > 0) {
-        window.alert("Great job, you've survived the game! You now have a score of " + playerMoney + ".");
->>>>>>> bf6ae42ae554e9c61f436a2f5638503418104bf8
     }
     else {
         window.alert("You've lost your robot in battle.");
