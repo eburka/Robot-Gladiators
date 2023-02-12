@@ -216,7 +216,7 @@ var shop = function(){
             break;
             default:
                 window.alert("You did not pick a valid option. Try again.");
-                
+        
             // Call shop() again to force player to pick a valid option 
             shop();
             break;
