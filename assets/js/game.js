@@ -1,6 +1,4 @@
-
 // This creates a function name "fight" 
-
 var fight = function(enemy) {
     console.log(enemy);
     
@@ -71,7 +69,7 @@ var fight = function(enemy) {
 }
 }; // End of while loop 
 
-//function to generate a random numeric value 
+//Function to generate a random numeric value 
 var randomNumber = function(min,max) {
     var value = Math.floor(Math.random() * (max - min + 1) + min);
 
@@ -125,7 +123,7 @@ var enemyInfo = [
     }
 ];
 
-// function to start a new game 
+// Function to start a new game 
 var startGame = function() {
     // Reset player stats 
     playerInfo.reset();
@@ -139,7 +137,7 @@ var startGame = function() {
             // Pick new enemy to fight based on the index of the enemyNames array 
             var pickedEnemyObj = enemyInfo[i];
 
-            // reset enemyHealth before starting new fight 
+            // Reset enemyHealth before starting new fight 
             pickedEnemyObj.health = randomNumber(40, 60);
             
             // Pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
@@ -147,7 +145,7 @@ var startGame = function() {
 
             if (playerInfo.health > 0 && i < enemyInfo.length - 1) {
 
-                //ask if player wants to use the store before next round 
+                //Ask if player wants to use the store before next round 
                 var storeConfirm = window.confirm("The fight is over, visit the store before the next round?");
     
                 // If yes, take them to the store() function 
@@ -171,7 +169,7 @@ var startGame = function() {
 // Function to END the entire game 
 var endGame = function() {
 
-    // if player is still alive, player wins!
+    // If player is still alive, player wins!
     if (playerInfo.health > 0) {
         window.alert("Great job, you've survived the game! You now have a score of " + playerInfo.money + ".");
     }
@@ -179,11 +177,11 @@ var endGame = function() {
         window.alert("You've lost your robot in battle.");
     }
     
-    // ask player if they'd like to play again 
+    // Ask player if they'd like to play again 
     var playAgainConfirm = window.confirm("Would you like to play again?");
 
     if (playAgainConfirm) {
-        //restart the game 
+        //Restart the game 
         startGame();
     }
     else{
@@ -214,12 +212,12 @@ var shop = function(){
         case "leave":
             window.alert("Leaving the store.");
             
-            // do nothing, do function will end 
+            // Do nothing, do function will end 
             break;
             default:
                 window.alert("You did not pick a valid option. Try again.");
                 
-            // call shop() again to force player to pick a valid option 
+            // Call shop() again to force player to pick a valid option 
             shop();
             break;
     }
